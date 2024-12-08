@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.backgroundColor, // Light background color
+    height: '100%',
   },
   logoContainer: {
     marginBottom: 20,
