@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F5F8FF', // Light background color
+    // backgroundColor: '#F5F8FF', // Light background color
     height: '100%',
   },
   logoContainer: {
