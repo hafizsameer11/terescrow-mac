@@ -69,7 +69,7 @@ function App(): JSX.Element {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        backgroundColor={Colors.backgroundColor}
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"

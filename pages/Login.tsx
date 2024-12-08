@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'reac
 // import Icon from 'react-native-vector-icons/MaterialIcons';
 // import Icon from 'react-native-vector-icons/MaterialIcons'; 
 import logo from '../assets/logo.png';
+import { Colors } from '../contants/Color';
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F5F8FF', // Light background color
+    backgroundColor: Colors.backgroundColor, // Light background color
   },
   logoContainer: {
     marginBottom: 20,
