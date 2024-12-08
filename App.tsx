@@ -24,8 +24,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Sidebar from './components/Sidebar';
-import LoginScreen from './pages/Login';
-import { Colors } from './contants/Color';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -34,27 +32,26 @@ type SectionProps = PropsWithChildren<{
 function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
-    <LoginScreen />
-    // <View style={styles.sectionContainer}>
-    //   <Text
-    //     style={[
-    //       styles.sectionTitle,
-    //       {
-    //         color: isDarkMode ? Colors.white : Colors.black,
-    //       },
-    //     ]}>
-    //     {title}
-    //   </Text>
-    //   <Text
-    //     style={[
-    //       styles.sectionDescription,
-    //       {
-    //         color: isDarkMode ? Colors.light : Colors.dark,
-    //       },
-    //     ]}>
-    //     {children}
-    //   </Text>
-    // </View>
+    <View style={styles.sectionContainer}>
+      <Text
+        style={[
+          styles.sectionTitle,
+          {
+            color: isDarkMode ? Colors.white : Colors.black,
+          },
+        ]}>
+        {title}
+      </Text>
+      <Text
+        style={[
+          styles.sectionDescription,
+          {
+            color: isDarkMode ? Colors.light : Colors.dark,
+          },
+        ]}>
+        {children}
+      </Text>
+    </View>
   );
 }
 
@@ -62,19 +59,21 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: Colors.backgroundColor,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
-
+      <StatusBar
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        backgroundColor={backgroundStyle.backgroundColor}
+      />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         {/* <Header /> */}
         <View>
-  
-          <LoginScreen />
+          <Sidebar />
         </View>
       </ScrollView>
     </SafeAreaView>
