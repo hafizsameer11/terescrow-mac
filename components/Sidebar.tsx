@@ -4,7 +4,7 @@ import { Text, View } from 'react-native'
 function Sidebar() {
   return (
    <View>
-    <Text>
+    <Text style={styles.text}>
 
     Hello Wolrd
     </Text>
@@ -12,4 +12,10 @@ function Sidebar() {
   )
 }
 
+const styles = {
+text:{
+  color: 'black',
+  fontSize: 30
+}
+}
 export default Sidebar
