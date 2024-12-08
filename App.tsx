@@ -62,21 +62,18 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.backgroundColor : Colors.backgroundColor,
+    backgroundColor: Colors.backgroundColor,
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={Colors.backgroundColor}
-      />
+
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         {/* <Header /> */}
         <View>
-          {/* <Sidebar /> */}
+  
           <LoginScreen />
         </View>
       </ScrollView>
