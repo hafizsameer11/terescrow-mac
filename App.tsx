@@ -76,7 +76,8 @@ function App(): JSX.Element {
         style={backgroundStyle}>
         {/* <Header /> */}
         <View>
-          <Sidebar />
+          {/* <Sidebar /> */}
+          <LoginScreen />
         </View>
       </ScrollView>
     </SafeAreaView>
