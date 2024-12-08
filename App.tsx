@@ -18,7 +18,6 @@ import {
 } from 'react-native';
 
 import {
-  Colors,
   DebugInstructions,
   Header,
   LearnMoreLinks,
@@ -26,6 +25,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Sidebar from './components/Sidebar';
 import LoginScreen from './pages/Login';
+import { Colors } from './contants/Color';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -62,7 +62,7 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.backgroundColor : Colors.backgroundColor,
   };
 
   return (
