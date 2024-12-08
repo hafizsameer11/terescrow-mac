@@ -66,7 +66,7 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView >
 
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
